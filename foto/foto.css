@@ -1,0 +1,22 @@
+.bar {
+    background-color: rgba(31, 82, 1, 0.4);
+    border:solid 1px #000000;
+    border-radius: 4px;
+
+    /* location */
+    position: fixed;
+}
+
+.bar_collapsed {
+    width: 200px;
+    height: 500px;
+    left: 800px;
+    -webkit-transition: All 1s ease;
+}
+
+.bar_expanded {
+    width: 700px;
+    height: 500px;
+    left: 300px;
+    -webkit-transition: All 1s ease;
+}
