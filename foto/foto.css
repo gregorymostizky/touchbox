@@ -55,12 +55,17 @@ body {
     left: 50%;
     text-align: center;
 
+}
+
+.light_box_image_holder {
+    width: 100%;
+    height: 100%;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-box-pack: center;
 }
 
-.light_box_wrapper img {
+.light_box_image_holder img {
     /*height: 100%;*/
     margin: auto;
     -webkit-box-flex: 1;
