@@ -19,10 +19,21 @@ $(document).ready(function() {
       $('.light_box_wrapper').removeClass('light_box_wrapper_inactive').addClass('light_box_wrapper_active');
     }
   });
+
   $('.overlay').click(function(){
     if($('.light_box_wrapper').hasClass('light_box_wrapper_active')){
       $('.overlay').removeClass('overlay_active').addClass('overlay_inactive');
       $('.light_box_wrapper').removeClass('light_box_wrapper_active').addClass('light_box_wrapper_inactive');
+    }
+  });
+
+  $('.light_box_wrapper').click(function() {
+    if($('.light_box_menu_top').hasClass('light_box_menu_top_inactive')){
+      $('.light_box_menu_top').removeClass('light_box_menu_top_inactive').addClass('light_box_menu_top_active');
+      $('.light_box_menu_bottom').removeClass('light_box_menu_bottom_inactive').addClass('light_box_menu_bottom_active');
+    } else {
+      $('.light_box_menu_top').removeClass('light_box_menu_top_active').addClass('light_box_menu_top_inactive');
+      $('.light_box_menu_bottom').removeClass('light_box_menu_bottom_active').addClass('light_box_menu_bottom_inactive');
     }
   });
 });

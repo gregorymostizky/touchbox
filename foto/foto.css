@@ -53,14 +53,12 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
-    padding: 4px;
     text-align: center;
 }
 
 .light_box_wrapper img {
     height: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }
 
 .light_box_wrapper_inactive {
@@ -69,7 +67,7 @@ body {
     margin-left: -50px;
     margin-top: -40px;
     opacity: 0;
-    -webkit-transition: all 0.5s ease;
+    -webkit-transition: all 0.25s ease;
 }
 
 .light_box_wrapper_active {
@@ -79,7 +77,45 @@ body {
     margin-left: -350px;
     margin-top: -250px;
     opacity: 1;
-    -webkit-transition: all 0.5s ease;
+    -webkit-transition: all 0.25s ease;
+}
+
+.light_box_menu_top {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 36px;
+    background: -webkit-linear-gradient(top, rgba(248,255,232,1) 0%,rgba(227,245,171,1) 33%,rgba(183,223,45,1) 100%);
+}
+
+.light_box_menu_bottom_inactive {
+    opacity: 0;
+    -webkit-transition: all 0.25s ease;
+}
+
+.light_box_menu_bottom_active {
+    opacity: 0.8;
+    -webkit-transition: all 0.25s ease;
+}
+
+.light_box_menu_bottom {
+    position: absolute;
+    top: 464px;
+    left: 0px;
+    width: 100%;
+    height: 36px;
+    background: -webkit-linear-gradient(top, rgba(248,255,232,1) 0%,rgba(227,245,171,1) 33%,rgba(183,223,45,1) 100%);
+}
+
+.light_box_menu_top_inactive {
+    opacity: 0;
+    -webkit-transition: all 0.25s ease;
+}
+
+.light_box_menu_top_active {
+    opacity: 0.8;
+    -webkit-transition: all 0.25s ease;
 }
 
 /* OVERLAY */
