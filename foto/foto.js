@@ -1,9 +1,12 @@
 $(document).ready(function() {
 
-  var close_light_box = function(){
+  var close_light_box = function(e){
+    e.preventDefault();
     if($('.light_box_wrapper').hasClass('light_box_wrapper_active')){
       $('.overlay').removeClass('overlay_active').addClass('overlay_inactive');
       $('.light_box_wrapper').removeClass('light_box_wrapper_active').addClass('light_box_wrapper_inactive');
+
+      // clear out menu bars
       $('.light_box_menu_top').removeClass('light_box_menu_top_active').addClass('light_box_menu_top_inactive');
       $('.light_box_menu_bottom').removeClass('light_box_menu_bottom_active').addClass('light_box_menu_bottom_inactive');
     }
@@ -13,6 +16,10 @@ $(document).ready(function() {
 
   $('.image_box img').click(function(e){
     if($('.light_box_wrapper').hasClass('light_box_wrapper_inactive')) {
+
+      // clear out menu bars
+      $('.light_box_menu_top').removeClass('light_box_menu_top_active').addClass('light_box_menu_top_inactive');
+      $('.light_box_menu_bottom').removeClass('light_box_menu_bottom_active').addClass('light_box_menu_bottom_inactive');
 
       // insert the image
       var image_src = $(e.srcElement).attr('src');
