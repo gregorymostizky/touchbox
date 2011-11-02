@@ -91,14 +91,18 @@ body {
 }
 
 /* LIGHT BOX MENUS */
-.light_box_menu_top {
+.light_box_menu_bottom {
+    /*-webkit-box-orient: vertical;*/
+    /*-webkit-box-pack: justify;*/
+    padding: 4px 0px;
     position: absolute;
-    top: 0px;
+    top: 564px;
     left: 0px;
     width: 100%;
-    height: 36px;
-    background: -webkit-linear-gradient(top, rgba(248, 255, 232, 1) 0%, rgba(227, 245, 171, 1) 33%, rgba(183, 223, 45, 1) 100%);
+    height: 28px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(94, 112, 151, 1)), color-stop(100%, rgba(46, 71, 124, 1)));
 }
+
 
 .light_box_menu_bottom_inactive {
     opacity: 0;
@@ -110,13 +114,17 @@ body {
     -webkit-transition: all 0.25s ease;
 }
 
-.light_box_menu_bottom {
+.light_box_menu_top {
+    /*-webkit-box-orient: vertical;*/
+    /*-webkit-box-pack: justified;*/
+
+    padding: 4px 0px;
     position: absolute;
-    top: 564px;
+    top: 0px;
     left: 0px;
     width: 100%;
-    height: 36px;
-    background: -webkit-linear-gradient(top, rgba(248, 255, 232, 1) 0%, rgba(227, 245, 171, 1) 33%, rgba(183, 223, 45, 1) 100%);
+    height: 28px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(94, 112, 151, 1)), color-stop(100%, rgba(46, 71, 124, 1)));
 }
 
 .light_box_menu_top_inactive {
@@ -132,45 +140,35 @@ body {
 /* BUTTONS */
 
 a.ios_button {
-    margin: 2px;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(77, 77, 77, 0.4)));
-    float: left;
-    padding: 1px;
+    /*border: solid 1px #333;*/
+    border-radius: 4px;
+    -webkit-box-shadow:inset 0px 0px 2px #000;
+
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(78, 100, 147, 1)), color-stop(100%, rgba(42, 68, 125, 1)));
+
     text-decoration: none;
-    outline: 0;
-    border-width: 1px;
-    border-style: solid;
+
+    padding: 4px 12px;
+
+    display: inline-block;
     width: auto;
-    overflow: visible;
-    border-color: transparent transparent rgba(202, 202, 202, 0.27) transparent;
-    -webkit-border-radius: 12px;
-    -webkit-background-clip: padding-box;
 }
 
 a.ios_button span {
-    display: block;
-    float: left;
+    font: normal 14px/1em Arial;
     letter-spacing: -1px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(255, 255, 255, 0.7) rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.7) rgba(0, 0, 0, 0.5);
-    font: bold 14px/1em Arial;
     color: white;
-    padding: 0.48em 0.7em;
-    cursor: pointer;
     text-shadow: rgba(0, 0, 0, 0.45) 0 -1px 0;
-    -webkit-box-shadow: rgba(0,0,0,0.75) 0px 0px 3px; -moz-box-shadow: rgba(0,0,0,0.75) 0px 0px 3px; box-shadow: rgba(0,0,0,0.75) 0px 0px 3px;
-    -webkit-border-radius: 7px;
-    background: transparent -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.5, rgba(255, 255, 255, 0.01)), to(transparent));
-    -webkit-background-clip: padding-box;
 }
 
 a.ios_button:active span {
-  border-top-color: rgba(255,255,255,0.2);
-  border-left-color: rgba(0,0,0,0.4);
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(150,150,150,0.6)), color-stop(0.5, rgba(60,60,60,0.6)), color-stop(0.5, rgba(40,40,40,0.6)), to(rgba(20, 20, 20, 0.5)));
-  -webkit-box-shadow: inset 0 0 18px rgba(0,0,0,0.75), rgba(0,0,0,0.75) 0px 0px 3px; -moz-box-shadow: inset 0 0 18px rgba(0,0,0,0.75), rgba(0,0,0,0.75) 0px 0px 3px; box-shadow: inset 0 0 18px rgba(0,0,0,0.75), rgba(0,0,0,0.75) 0px 0px 3px;
-  -webkit-background-clip: padding-box;
+    border-top-color: rgba(255, 255, 255, 0.2);
+    border-left-color: rgba(0, 0, 0, 0.4);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(150, 150, 150, 0.6)), color-stop(0.5, rgba(60, 60, 60, 0.6)), color-stop(0.5, rgba(40, 40, 40, 0.6)), to(rgba(20, 20, 20, 0.5)));
+    -webkit-box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) 0px 0px 3px;
+    -moz-box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) 0px 0px 3px;
+    box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) 0px 0px 3px;
+    -webkit-background-clip: padding-box;
 }
 
 /* OVERLAY */
