@@ -7,9 +7,14 @@ $(document).ready(function() {
       $('.light_box_wrapper').removeClass('light_box_wrapper_active').addClass('light_box_wrapper_inactive');
 
       // clear out menu bars
-      $('.light_box_menu_top').removeClass('light_box_menu_top_active').addClass('light_box_menu_top_inactive');
-      $('.light_box_menu_bottom').removeClass('light_box_menu_bottom_active').addClass('light_box_menu_bottom_inactive');
+      hide_overlays();
     }
+  },
+  hide_overlays = function() {
+    $('.light_box_menu_top').removeClass('light_box_menu_top_active').addClass('light_box_menu_top_inactive');
+    $('.light_box_menu_bottom').removeClass('light_box_menu_bottom_active').addClass('light_box_menu_bottom_inactive');
+    $('.light_box_arrow_left').removeClass('opaque').addClass('transparent');
+    $('.light_box_arrow_right').removeClass('opaque').addClass('transparent');
   };
 
   /* LIGHT BOX POPUP */
@@ -18,8 +23,7 @@ $(document).ready(function() {
     if($('.light_box_wrapper').hasClass('light_box_wrapper_inactive')) {
 
       // clear out menu bars
-      $('.light_box_menu_top').removeClass('light_box_menu_top_active').addClass('light_box_menu_top_inactive');
-      $('.light_box_menu_bottom').removeClass('light_box_menu_bottom_active').addClass('light_box_menu_bottom_inactive');
+      hide_overlays();
 
       // insert the image
       var image_src = $(e.srcElement).attr('src');
@@ -51,9 +55,10 @@ $(document).ready(function() {
     if($('.light_box_menu_top').hasClass('light_box_menu_top_inactive')){
       $('.light_box_menu_top').removeClass('light_box_menu_top_inactive').addClass('light_box_menu_top_active');
       $('.light_box_menu_bottom').removeClass('light_box_menu_bottom_inactive').addClass('light_box_menu_bottom_active');
+      $('.light_box_arrow_left').removeClass('transparent').addClass('opaque');
+      $('.light_box_arrow_right').removeClass('transparent').addClass('opaque');
     } else {
-      $('.light_box_menu_top').removeClass('light_box_menu_top_active').addClass('light_box_menu_top_inactive');
-      $('.light_box_menu_bottom').removeClass('light_box_menu_bottom_active').addClass('light_box_menu_bottom_inactive');
+      hide_overlays();
     }
   });
 });
