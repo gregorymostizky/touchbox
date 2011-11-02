@@ -11,7 +11,6 @@ $(document).ready(function() {
     }
   },
   hide_overlays = function() {
-    $('.light_box_menu_top').removeClass('light_box_menu_top_active').addClass('light_box_menu_top_inactive');
     $('.light_box_menu_bottom').removeClass('light_box_menu_bottom_active').addClass('light_box_menu_bottom_inactive');
     $('.light_box_arrow_left').removeClass('opaque').addClass('transparent');
     $('.light_box_arrow_right').removeClass('opaque').addClass('transparent');
@@ -52,8 +51,7 @@ $(document).ready(function() {
   $('#light_box_done_button').click(close_light_box);
 
   $('.light_box_wrapper').click(function() {
-    if($('.light_box_menu_top').hasClass('light_box_menu_top_inactive')){
-      $('.light_box_menu_top').removeClass('light_box_menu_top_inactive').addClass('light_box_menu_top_active');
+    if($('.light_box_menu_bottom').hasClass('light_box_menu_bottom_inactive')){
       $('.light_box_menu_bottom').removeClass('light_box_menu_bottom_inactive').addClass('light_box_menu_bottom_active');
       $('.light_box_arrow_left').removeClass('transparent').addClass('opaque');
       $('.light_box_arrow_right').removeClass('transparent').addClass('opaque');

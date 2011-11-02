@@ -100,17 +100,25 @@ body {
 
 /* LIGHT BOX MENUS */
 .light_box_menu_bottom {
-    /*-webkit-box-orient: vertical;*/
-    /*-webkit-box-pack: justify;*/
     padding: 4px 0px;
     position: absolute;
-    top: 564px;
+    top: 544px;
     left: 0px;
     width: 100%;
-    height: 28px;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(94, 112, 151, 1)), color-stop(100%, rgba(46, 71, 124, 1)));
+    height: 48px;
+    background: transparent;
+    /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(94, 112, 151, 1)), color-stop(100%, rgba(46, 71, 124, 1)));*/
 }
 
+.light_box_menu_bottom .left_group {
+    float: left;
+    margin-left: 16px;
+}
+
+.light_box_menu_bottom .right_group {
+    float: right;
+    margin-right: 16px;
+}
 
 .light_box_menu_bottom_inactive {
     opacity: 0;
@@ -122,38 +130,15 @@ body {
     -webkit-transition: all 0.25s ease;
 }
 
-.light_box_menu_top {
-    /*-webkit-box-orient: vertical;*/
-    /*-webkit-box-pack: justified;*/
-
-    padding: 4px 0px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 28px;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(94, 112, 151, 1)), color-stop(100%, rgba(46, 71, 124, 1)));
-}
-
-.light_box_menu_top_inactive {
-    opacity: 0;
-    -webkit-transition: all 0.25s ease;
-}
-
-.light_box_menu_top_active {
-    opacity: 1;
-    -webkit-transition: all 0.25s ease;
-}
-
 /* LIGTH BOX ARROWS */
 .light_box_arrow_left {
     background: url(icons/arrowleft.png);
 
     position: absolute;
     left: 20px;
-    top: 290px;
-    width: 26px;
-    height: 26px;
+    top: 270px;
+    width: 52px;
+    height: 52px;
     z-index: 110;
 }
 
@@ -161,10 +146,10 @@ body {
     background: url(icons/arrowright.png);
 
     position: absolute;
-    left: 854px;
-    top: 290px;
-    width: 26px;
-    height: 26px;
+    left: 826px;
+    top: 270px;
+    width: 52px;
+    height: 52px;
     z-index: 110;
 }
 
@@ -173,27 +158,29 @@ body {
 a.ios_button {
     /*border: solid 1px #333;*/
     border-radius: 4px;
-    -webkit-box-shadow:inset 0px 0px 2px #000;
+    -webkit-box-shadow:inset 0px 0px 2px #000, 0px 0px 16px #fff;;
 
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(78, 100, 147, 1)), color-stop(100%, rgba(42, 68, 125, 1)));
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(100, 100, 100, 1)), color-stop(100%, rgba(50, 50, 50, 1)));
 
     text-decoration: none;
 
-    padding: 4px 12px;
+    padding: 8px 16px;
+    margin: 0px 4px;
 
     display: inline-block;
+
     width: auto;
 }
 
 a.ios_button span {
-    font: normal 14px/1em Arial;
-    letter-spacing: -1px;
+    font: normal 18px/1em Arial;
+    /*letter-spacing: -1px;*/
     color: white;
     text-shadow: rgba(0, 0, 0, 0.45) 0 -1px 0;
 }
 
 a.ios_button:active {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(40, 50, 75, 1)), color-stop(100%, rgba(21, 34, 62, 1)));
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(40, 40, 40, 1)), color-stop(100%, rgba(25, 25, 25, 1)));
 }
 
 /* OVERLAY */
