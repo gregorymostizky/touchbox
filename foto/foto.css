@@ -177,11 +177,11 @@ a.ios_button:active {
 .overlay_active {
     z-index: 1;
     opacity: 0.5;
-    -webkit-transition: all 0.5s ease;
+    /*-webkit-transition: all 0.1s ease;*/
 }
 
 .overlay_inactive {
     z-index: -1;
     opacity: 0;
-    -webkit-transition: all 0.5s ease;
+    /*-webkit-transition: all 0.1s ease;*/
 }
