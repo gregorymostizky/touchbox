@@ -66,8 +66,10 @@ body {
 }
 
 .light_box_image_zone {
+    position: relative;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .light_box_image_zone .current {
