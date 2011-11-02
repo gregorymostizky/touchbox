@@ -65,10 +65,34 @@ body {
 
 }
 
+.light_box_image_zone {
+    width: 100%;
+    height: 100%;
+}
+
+.light_box_image_zone .current {
+    position: absolute;
+    top:0px;
+    left: 0px;
+}
+
+.light_box_image_zone .next {
+    position: absolute;
+    top:0px;
+    left: 900px;
+}
+
+.light_box_image_zone .prev {
+    position: absolute;
+    top:0px;
+    left: -900px;
+}
+
+
 .light_box_image_holder {
     width: 100%;
     height: 100%;
-    display: -webkit-box;
+    display: -webkit-inline-box;
     -webkit-box-orient: vertical;
     -webkit-box-pack: center;
 }
