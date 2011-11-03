@@ -17,6 +17,21 @@ body {
     -webkit-transition: all 0.25s ease;
 }
 
+
+/* DEBUG */
+
+.debug_console {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 200px;
+    height: 100px;
+    background: #888;
+    color: #fff;
+    z-index: 100000;
+    overflow: hidden;
+}
+
 /* BAR */
 
 .bar {
