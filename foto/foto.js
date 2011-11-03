@@ -39,7 +39,9 @@ $(document).ready(function() {
 
       // insert the image
       var image_src = $(e.srcElement).attr('src');
-      var images_html = "<div class='light_box_image_holder current'><img src='" + image_src + "'></div>";
+
+      var images_html = "<div class='light_box_image_holder prev'><img src='" + image_src + "'></div>";
+      images_html += "<div class='light_box_image_holder current'><img src='" + image_src + "'></div>";
       images_html += "<div class='light_box_image_holder next'><img src='" + image_src + "'></div>";
 
       $('.light_box_image_zone').html(images_html);
@@ -92,6 +94,31 @@ $(document).ready(function() {
     $('.light_box_image_zone .current, .light_box_image_zone .next').animate({
       left : '-=900'
     }, 1000, movement_complete);
+  });
+
+  $('.light_box_arrow_left').click(function(e) {
+    var movement_right_complete = function() {
+      // run once
+      if ($('.light_box_image_zone .current').css('left') != '0px') {
+        // delete old next
+        $('.light_box_image_zone .next').remove();
+
+        // reset classes and styles
+        $('.light_box_image_zone .current').css('left', '').removeClass('current').addClass('next');
+        $('.light_box_image_zone .prev').css('left', '').removeClass('prev').addClass('current');
+
+        // load new prev
+        var image_src = next_image_src();
+        var image_html = "<div class='light_box_image_holder prev'><img src='" + image_src + "'></div>";
+        $('.light_box_image_zone').append(image_html);
+        fit_to_box($('.light_box_image_zone .prev img')[0]);
+      }
+    };
+
+    e.stopPropagation();
+    $('.light_box_image_zone .current, .light_box_image_zone .prev').animate({
+      left : '+=900'
+    }, 1000, movement_right_complete);
   });
 
 });
